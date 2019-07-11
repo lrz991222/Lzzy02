@@ -1,0 +1,44 @@
+﻿.modal-header {
+    padding: 0;
+}
+/*.modal-content{border-radius: 0;}*/
+.modal-dialog .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.modal-dialog h3 {
+    font-size: 14px;
+    height: 42px;
+    line-height: 42px;
+    margin: 0;
+    padding: 0 80px 0 20px;
+}
+
+.modal-dialog label {
+    font-weight: 400;
+}
+
+.tips {
+    line-height: 34px;
+    font-size: 13px;
+}
+
+    .tips span {
+        color: red;
+    }
+
+@media (min-width: 1080px) {
+    /*模态框-距顶部距离*/
+    .modal-dialog {
+        margin-top: 100px;
+    }
+
+    .col-sm-6 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+ 

@@ -1,0 +1,55 @@
+﻿ 
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Index_LayoutView.cshtml";
+}
+
+@model ELearning.UserAndRole.ApplicationUser
+@*主要内容*@
+<div class="my">
+    <a asp-action="UserInfo">
+        <img src="@Model.HerdPortrait" class="im">
+    </a>
+    <h3 class="txt">@Model.Synopsis</h3>
+    <button type="button" class="btn btn-default" id=follow>关注<p>6</p></button>
+    <button type="button" class="btn btn-default" id=fans>粉丝<p>6</p></button>
+</div>
+<div class="fun">
+    <a class="btn btn-default btn-lg" asp-controller="User" asp-action="Travel">
+        <span class="glyphicon glyphicon-edit" aria-hidden="true"
+              style="width: 230px;height: 95px;font-size: 70px;"></span>
+        <p>写游记</p>
+    </a>
+    <a class="btn btn-default btn-lg" asp-controller="User" asp-action="Gowith">
+        <span class="glyphicon glyphicon-phone" aria-hidden="true"
+              style="width: 230px;height: 95px;font-size: 70px;"></span>
+        <p>我的结伴</p>
+    </a>
+    <button type="button" class="btn btn-default btn-lg" onclick="window.location.href='#'">
+        <span class="glyphicon glyphicon-user" aria-hidden="true"
+              style="width: 230px;height: 95px;font-size: 70px;"></span>
+        <p>私信</p>
+    </button>
+</div>
+<div class="content">
+    <span>游记 1</span>
+    <span>回复 0</span>
+    <span>阅读 300</span>
+    <div>
+        <img src="~/images/u40.jpg" class="FLOWER">
+        <span id="taiwan">【台湾干货】一生要去一次的地方 8000一个人</span>
+        <p>其实我的行程很紧，和朋友商量调整的，朋友临时有事去不了，变成我自己，所以推荐大家可以看每天的行程安排，不建议我的车程走向哦～</p>
+    </div>
+</div>
+
+
+<script src="~/js/jquery-2.1.4.min.js"></script>
+<script src="~/js/JiSlider.js"></script>
+<script src="/js/jarallax.js"></script>
+<script src="/js/SmoothScroll.min.js"></script>
+<script src="/js/jquery.waypoints.min.js"></script>
+<script src="/js/jquery.countup.js"></script>
+<script type="text/javascript" src="/js/move-top.js"></script>
+<script type="text/javascript" src="/js/easing.js"></script>
+<script type="text/javascript" src="/js/bootstrap-3.1.1.min.js"></script>
+<script type="text/javascript" src="/js/jquery.flexisel.js"></script>

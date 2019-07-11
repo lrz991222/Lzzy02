@@ -1,0 +1,23 @@
+﻿@model ELearning.Entities.ScenicSpot
+@{
+    ViewData["Title"] = "ScenicSpotsDetails";
+    Layout = "~/Views/Shared/Index_LayoutView.cshtml";
+}
+<br>
+<div style="text-align:left;margin:auto;width:700px">
+    <h1>@Model.Name</h1><br><br />
+    <p>
+        @Model.Describe
+    </p><br />
+        <p>
+            @Model.Addr [@Model.Grade]<br />
+            <h3>类型：@Model.Type </h3><br />
+            <h3>主题：@Model.Theme.themeName<h3><br />
+            <h3>标签：@Model.Label.LabelName <h3><br />
+            <h3>开发时间： @Model.Opentime<h3><br/>
+             <h3>电话：@Model.Tel<h3><br/>
+</p>
+    <img src="@Model.Url" class="img-rounded"><br>
+
+
+</div>

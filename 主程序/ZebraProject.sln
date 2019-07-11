@@ -1,0 +1,83 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.438
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EL001.系统角色与用户类型", "EL001.系统角色与用户类型", "{5438BBFC-E5FC-43AD-AD5C-190DB118C1B8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ELearning.UserAndRole", "ELearning.UserAndRole\ELearning.UserAndRole.csproj", "{4D7C9AE0-3AE3-4AC6-B07C-B6B4610F8D68}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EL002.系统业务实体模型", "EL002.系统业务实体模型", "{224909D5-5137-482D-BCCA-1047A9F114E2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EL003.系统关系数据库映射", "EL003.系统关系数据库映射", "{2B964D9A-0075-4406-8DF4-B0740FDCC350}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EL004.系统数据访问处理", "EL004.系统数据访问处理", "{728EC16F-6EAA-465E-BCBB-7523A8F6C97C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EL005.系统数据对象视图模型", "EL005.系统数据对象视图模型", "{0F18AEB3-07CA-428C-AABC-076E36A0DF7C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EL006.Web 前端应用", "EL006.Web 前端应用", "{25588FB0-E84C-4A34-8614-E695471E7361}"
+	ProjectSection(SolutionItems) = preProject
+		ZebraWeb\数据迁移.txt = ZebraWeb\数据迁移.txt
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ELearning.Entities", "ELearning.Entities\ELearning.Entities.csproj", "{A80B59C0-7CCB-42BF-847B-EFAF091194F6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ELearning.ORM", "ELearning.ORM\ELearning.ORM.csproj", "{D8D50A9D-674F-4FBF-AEBE-708F8C663180}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ELearning.DataAccess", "ELearning.DataAccess\ELearning.DataAccess.csproj", "{AE535880-0FAF-4B27-8364-EF76E9A62872}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ELearning.ViewModels", "ELearning.ViewModels\ELearning.ViewModels.csproj", "{31EE9447-62A0-4FB8-B119-045780589BCB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZebraWeb", "ZebraWeb\ZebraWeb.csproj", "{4360A882-4565-44A8-8DFC-0FFDDD674112}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AA2A0CEC-6BC0-4447-BCB7-41B00D73C959}"
+	ProjectSection(SolutionItems) = preProject
+		10.课程项目说明1.0 (1).docx = 10.课程项目说明1.0 (1).docx
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D7C9AE0-3AE3-4AC6-B07C-B6B4610F8D68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D7C9AE0-3AE3-4AC6-B07C-B6B4610F8D68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D7C9AE0-3AE3-4AC6-B07C-B6B4610F8D68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D7C9AE0-3AE3-4AC6-B07C-B6B4610F8D68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A80B59C0-7CCB-42BF-847B-EFAF091194F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A80B59C0-7CCB-42BF-847B-EFAF091194F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A80B59C0-7CCB-42BF-847B-EFAF091194F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A80B59C0-7CCB-42BF-847B-EFAF091194F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8D50A9D-674F-4FBF-AEBE-708F8C663180}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8D50A9D-674F-4FBF-AEBE-708F8C663180}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8D50A9D-674F-4FBF-AEBE-708F8C663180}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8D50A9D-674F-4FBF-AEBE-708F8C663180}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE535880-0FAF-4B27-8364-EF76E9A62872}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE535880-0FAF-4B27-8364-EF76E9A62872}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE535880-0FAF-4B27-8364-EF76E9A62872}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE535880-0FAF-4B27-8364-EF76E9A62872}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31EE9447-62A0-4FB8-B119-045780589BCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31EE9447-62A0-4FB8-B119-045780589BCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31EE9447-62A0-4FB8-B119-045780589BCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31EE9447-62A0-4FB8-B119-045780589BCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4360A882-4565-44A8-8DFC-0FFDDD674112}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4360A882-4565-44A8-8DFC-0FFDDD674112}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4360A882-4565-44A8-8DFC-0FFDDD674112}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4360A882-4565-44A8-8DFC-0FFDDD674112}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4D7C9AE0-3AE3-4AC6-B07C-B6B4610F8D68} = {5438BBFC-E5FC-43AD-AD5C-190DB118C1B8}
+		{A80B59C0-7CCB-42BF-847B-EFAF091194F6} = {224909D5-5137-482D-BCCA-1047A9F114E2}
+		{D8D50A9D-674F-4FBF-AEBE-708F8C663180} = {2B964D9A-0075-4406-8DF4-B0740FDCC350}
+		{AE535880-0FAF-4B27-8364-EF76E9A62872} = {728EC16F-6EAA-465E-BCBB-7523A8F6C97C}
+		{31EE9447-62A0-4FB8-B119-045780589BCB} = {0F18AEB3-07CA-428C-AABC-076E36A0DF7C}
+		{4360A882-4565-44A8-8DFC-0FFDDD674112} = {25588FB0-E84C-4A34-8614-E695471E7361}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4247D723-7202-418C-9E21-C3E8B41B875A}
+	EndGlobalSection
+EndGlobal

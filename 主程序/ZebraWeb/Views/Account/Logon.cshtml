@@ -1,0 +1,52 @@
+﻿@model ELearning.ViewModels.Common.LoginVM
+@{
+    ViewData["Title"] = "Logon";
+    Layout = "~/Views/Shared/Index_LayoutView.cshtml";
+}
+
+<div class="row" id="row">
+    <div class="col col-login mx-auto">
+        <div class="text-center mb-6">
+            <h3>欢迎进入斑马旅游网</h3>
+        </div>
+        <form class="card" asp-area="" asp-controller="Account" asp-action="Logon" method="post">
+            <input type="hidden" id="ReturnUrl" name="ReturnUrl" value="@Model.ReturnUrl" />
+            <div class="card-body p-6" id="denglukuang">
+                <div class="card-title">请使用你的用户名和密码登录</div>
+                <div>
+                    <span class="text-danger field-validation-valid">@ViewData["LoginStatusString"]</span>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">用户名</label>
+                    <input type="text" class="form-control" id="UserName" name="UserName" placeholder="请输入用户名" value="@Model.UserName">
+                </div>
+                <div class="" style="margin-top:-6px;margin-bottom:12px">
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">
+                        密码
+                        @*<a href="./forgot-password.html" class="float-right small">忘记密码？</a>*@
+                    </label>
+                    <input type="password" class="form-control" id="Password" name="Password" placeholder="请输入密码" value="@Model.Password">
+                </div>
+                <div class="" style="margin-top:-6px;margin-bottom:12px">
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="RememberMe" name="RememberMe" value="true" />
+                        <span class="custom-control-label">记住我</span>
+                    </label>
+                </div>
+                <div class="text-center text-muted">
+                    没有账号？<a asp-action="Register">注册</a>
+                </div>
+                <div class="form-footer">
+                    <button type="submit" class="btn btn-primary btn-block">登录</button>
+                </div>
+            </div>
+        </form>
+         
+    </div>
+</div>

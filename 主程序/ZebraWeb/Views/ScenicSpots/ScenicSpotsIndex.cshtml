@@ -1,0 +1,31 @@
+﻿@model IEnumerable<ELearning.Entities.ScenicSpot>
+@{
+    ViewData["Title"] = "ScenicSpotsIndex";
+    Layout = "~/Views/Shared/Index_LayoutView.cshtml";
+}
+<div class="shanghai" style="width:500px">
+    @foreach (var item in Model)
+    {
+        @*<h3>@item.Name</h3>
+
+            <a asp-action="ScenicSpotsDetails" asp-route-id="@item.Id">
+                <img src="@item.Url" class="r1" width="500px" height="450px">
+            </a>
+            <br>
+            <p>
+                @item.Describe
+            </p>
+            <br />
+            <br />*@
+
+
+    <h3> @item.Name</h3> <br />
+
+        <a asp-action="ScenicSpotsDetails" asp-route-id="@item.Id">
+
+            <img src="@item.Url"  id="unm"><br />
+                @item.Describe
+
+            </a>
+<br><br />
+}

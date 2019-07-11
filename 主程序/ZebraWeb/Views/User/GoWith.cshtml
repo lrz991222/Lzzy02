@@ -1,0 +1,69 @@
+﻿@model ELearning.Entities.GoWith
+@{
+    ViewData["Title"] = "GoWith";
+    Layout = "~/Views/Shared/Index_LayoutView.cshtml";
+}
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="GoWith">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="GowithTitle" class="control-label"></label>
+                <input asp-for="GowithTitle" class="form-control" />
+                <span asp-validation-for="GowithTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <select asp-for="City.CityName">
+                    @foreach (var item in @ViewBag.Citys)
+                    {
+                    <option value="@item.CityName">@item.CityName</option> 
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="GowithContent" class="control-label"></label>
+                <input asp-for="GowithContent" class="form-control" />
+                <span asp-validation-for="GowithContent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GowithSynopsis" class="control-label"></label>
+                <input asp-for="GowithSynopsis" class="form-control" />
+                <span asp-validation-for="GowithSynopsis" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DepartureDate" class="control-label"></label>
+                <input asp-for="DepartureDate" class="form-control" />
+                <span asp-validation-for="DepartureDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EndDate" class="control-label"></label>
+                <input asp-for="EndDate" class="form-control" />
+                <span asp-validation-for="EndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tel" class="control-label"></label>
+                <input asp-for="Tel" class="form-control" />
+                <span asp-validation-for="Tel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Image" class="control-label"></label>
+                <input asp-for="Image" class="form-control" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Num" class="control-label"></label>
+                <input asp-for="Num" class="form-control" />
+                <span asp-validation-for="Num" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

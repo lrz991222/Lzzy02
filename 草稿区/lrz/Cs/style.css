@@ -1,0 +1,235 @@
+a{
+	text-decoration:none;
+}
+body{
+	margin: 0 auto;
+}
+
+/*景点信息样式*/
+table.form1 {
+	font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	color:#333333;
+	border-width: 1px;
+	border-color: #666666;
+	border-collapse: collapse;
+	margin: auto;
+	margin-top: 10px;
+	width: 100%;
+	height: 250px;
+}
+.main{
+	width: 1000px;
+	text-align: center;
+	margin: auto;
+
+}
+
+.right{
+	text-align: right;	
+}
+
+.lie{
+	text-align: right;	
+}
+
+h1{
+	text-align: center;
+}
+
+table.form1 th {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #dedede;
+}
+table.form1 td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #ffffff;
+}
+
+
+
+/*北海银滩样式*/
+.bhyt{
+	margin:  90px 0px 0px 40%;
+	width: 50%;
+	height: 500px;
+}
+
+.bt1{
+	margin: 0 0 0 4%;
+    font-size: 25px;
+    width: 80px;
+	height: 50px;
+}
+
+
+
+/*桂林阳朔样式*/
+.glys{
+	margin:  90px 0px 0px 40%;
+	width: 50%;
+	height: 500px;
+}
+
+.bt2{
+	margin: 0 0 0 4%;
+    font-size: 25px;
+    width: 80px;
+	height: 50px;
+}
+
+
+
+/*广州小蛮腰样式*/
+.gzxmy{
+	margin:  90px 0px 0px 40%;
+	width: 50%;
+	height: 500px;
+}
+
+.bt3{
+	margin: 0 0 0 4%;
+    font-size: 25px;
+    width: 80px;
+	height: 50px;
+}
+
+
+/*成都都江堰样式*/
+.cddjy{
+	margin:  90px 0px 0px 40%;
+	width: 50%;
+	height: 500px;
+}
+
+.bt4{
+	margin: 0 0 0 4%;
+    font-size: 25px;
+    width: 80px;
+	height: 50px;
+}
+
+
+/*数据管理界面*/
+.box{
+	width: 100%;
+	height: 900px;
+	margin: 0 auto;
+	
+}
+/*数据*/
+.sjk{
+	width: 250px; 
+	height: 120px;
+	border:solid 1px black;
+	float:left;
+	text-align: right;
+	margin: 10% 0 0 30%;
+}
+ 
+
+.zt1{
+ 
+	text-align: left;
+	text-indent: 10px;
+	line-height: 20px;
+}
+
+.ch{
+	margin: 0 0 0 12px;
+	width: 35px;
+	height: 35px;
+ 
+}
+
+.sx{
+	width: 20px;
+	height: 20px;
+	margin: 0 0 0 17px;
+}
+
+
+
+
+
+/*打赏*/
+.dsk{
+	width: 250px; 
+	height: 120px;
+	border:solid 1px black;
+	margin: 10% 0 0 50px;
+	text-align: right;
+	float:left;
+}
+
+.ds1{
+	width: 35px;
+	height: 35px;
+	margin: 0 0 0 10px;
+}
+
+.ds2{
+	text-align: left;
+	text-indent: 10px;
+	line-height: 20px;
+}
+
+.sx1{
+	width: 20px;
+	height: 20px;
+	margin: 0 0 0 17px;
+}
+
+
+
+
+
+/*帖子*/
+.tzk{
+	width: 250px; 
+	height: 120px;
+	border:solid 1px black;
+	margin: 10% 0 0 50px;
+	text-align: right;
+	float:left;
+}
+
+.tz1{
+	width: 35px;
+	height: 35px;
+	margin: 0 0 0 10px;
+}
+
+.tz2{
+	text-align: left;
+	text-indent: 10px;
+	line-height: 20px;
+}
+
+.sx2{
+	width: 20px;
+	height: 20px;
+	margin: 0 0 0 17px;
+}
+
+/*大图*/
+.box2{
+	height: 1000px;
+}
+
+.fwl{
+	width: 650px;
+	height: 400px;
+	margin: 40px 5% 0 170px;
+}
+
+.zj{
+	width: 650px;
+	height: 400px;
+}

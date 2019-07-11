@@ -1,0 +1,61 @@
+
+table.for {
+	font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	color:#333333;
+	border-width: 1px;
+	border-color: #666666;
+	border-collapse: collapse;
+	position: absolute;
+	left: 750px;
+	top: 200px;
+	text-align:center; 
+}
+table.for th {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #dedede;
+	text-align:center; 
+}
+table.for td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #ffffff;
+	text-align:center; 
+}
+
+
+ .r1{
+	width:500px;
+	height:400px;
+	margin: 200px  auto;
+	border-style: solid;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	
+	background-image:url(/草稿区/景区管理员/image/2.png);
+ }
+
+
+
+.btnLogin{
+    width:100px;
+	height:30px;
+}
+.t2{
+    margin: 10px;
+}
+.t3{
+    margin: 10px;
+}
+
+.header{
+}
+
+
+

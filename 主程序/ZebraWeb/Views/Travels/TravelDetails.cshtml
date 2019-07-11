@@ -1,0 +1,31 @@
+﻿@model ELearning.Entities.Travels
+@{
+    ViewData["Title"] = "TravelDetails";
+    Layout = "~/Views/Shared/Index_LayoutView.cshtml";
+}
+    <p style="font-size: 30px; text-align:center;font-weight:bold;margin-top: 100px;">@Model.TravelsTitle</p>
+  
+         
+    <ul style="width:500px;margin:auto;list-style:none">
+        @foreach (var l in Model.TravelNotes)
+        {
+            <br />
+            <li>
+                <img src="@l.Images" alt="" width="500px;" height="400px">
+            </li>
+            <br />
+
+            <br />
+            <p style="width 300px ;text-align:left">@l.Notos</p>
+        }
+
+        <li class="gonglvneirong"text-align:center;>
+            <p>发布时间 @Model.TravelsTime</p>
+            <p>赞：@Model.Like  分享：@Model.Share</p>
+            <p>作者：@Model.User.UserName</p>
+        </li>
+
+    </ul>
+     
+        
+ 

@@ -1,0 +1,56 @@
+﻿@model ZebraWeb.Models.TraveslVM
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Travels</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TravelsTitle)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TravelsTitle)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TravelsTime)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TravelsTime)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Like)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Like)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Collection)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Collection)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Share)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Share)
+        </dd>
+    </dl>
+    <div>
+        @foreach (var item in Model.TravelNotes)
+        {
+            <p><img src="@item.Images" /></p>
+            <p>@item.Notos</p>
+        }
+    </div>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.TravelsID">Edit</a> |
+    <a asp-action="Index">返回</a>
+</div>

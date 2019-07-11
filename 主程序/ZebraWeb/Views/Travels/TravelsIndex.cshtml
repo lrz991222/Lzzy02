@@ -1,0 +1,45 @@
+﻿@model IEnumerable<ELearning.Entities.Travels>
+@{
+    ViewData["Title"] = "TravelsIndex";
+    Layout = "~/Views/Shared/Index_LayoutView.cshtml";
+}
+
+<p style="font-size: 30px; text-align:center;font-weight:bold;">热门攻略·Hot Tourism</p>
+
+<div id="wiop">
+    @foreach (var item in Model.Take(4))
+    {
+        @foreach (var l in item.TravelNotes.Take(1))
+        {
+            <div id="liebiao" style="margin-left:20px">
+                <h4 style="text-align:center">@item.TravelsTitle</h4>
+                <a asp-action="TravelDetails" asp-route-id="@item.TravelsID">
+                    <img src="@l.Images" style="height:241px;width:241px;">
+                    @l.Notos
+                </a>
+            </div>
+        }
+
+    }
+
+</div>
+<div id='lvxinggonglv'>
+    <p style="font-size: 30px; text-align:center;font-weight:bold;">旅游攻略 · Strategy</p>
+
+    @foreach (var item in Model.Take(4))
+    {<p id="aomenremen">
+            @foreach (var l in item.TravelNotes.Take(1))
+            {
+
+                <a asp-action="TravelDetails" asp-route-id="@item.TravelsID">
+                    <img src="@l.Images" style="height: 150px;width:268px;">
+                    <b style="color:black;">@item.TravelsTitle</b><br>
+
+                    @l.Notos<br>
+                </a>
+            }
+        </p>
+    }
+
+
+</div>

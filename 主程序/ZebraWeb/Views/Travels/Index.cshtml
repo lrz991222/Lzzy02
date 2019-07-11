@@ -1,0 +1,87 @@
+﻿@model PaginatedList<ELearning.Entities.Travels>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>游记攻略管理</h1>
+
+<p>
+    <a asp-action="Create">新增游记</a>
+</p>
+<form asp-controller="Travels" asp-action="Index">
+    <p>
+        游记标题： <input type="text" name="TravelsTitle">
+        <input type="submit" value="搜索" />
+    </p>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                标题
+            </th>
+            <th>
+                发布时间
+            </th>
+            <th>
+                赞
+            </th>
+            <th>
+                收藏
+            </th>
+            <th>
+                分享
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TravelsTitle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TravelsTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Like)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Collection)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Share)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.TravelsID">编辑</a> |
+                    <a asp-action="Details" asp-route-id="@item.TravelsID">详情</a> |
+                    <a asp-action="Delete" asp-route-id="@item.TravelsID">删除</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@{
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+}
+
+<a asp-action="Index"
+   asp-route-sortOrder="@ViewData["CurrentSort"]"
+   asp-route-pageNumber="@(Model.PageIndex - 1)"
+   asp-route-currentFilter="@ViewData["CurrentFilter"]"
+   class="btn btn-default @prevDisabled">
+    上一页
+</a>
+<a asp-action="Index"
+   asp-route-sortOrder="@ViewData["CurrentSort"]"
+   asp-route-pageNumber="@(Model.PageIndex + 1)"
+   asp-route-currentFilter="@ViewData["CurrentFilter"]"
+   class="btn btn-default @nextDisabled">
+    下一页
+</a>

@@ -1,0 +1,116 @@
+﻿@model ELearning.ViewModels.UserAndRole.ApplicationUserVM
+@using ELearning.UserAndRole;
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/Index_LayoutView.cshtml";
+    var loginVM = ViewData["LoginVM"] as ELearning.ViewModels.Common.LoginVM;
+}
+
+<div class="row">
+    <div class="col-md-3 mb-5">
+       
+      
+        <div  class="" style="">
+        </div>
+    </div>
+
+    <div class="col-md-6 mb-5">
+        <h4>注册个人资料</h4>
+        <hr>
+        <form id="boVM_CreateOrEdit" asp-area="" asp-controller="Account" asp-action="Register" class="form-horizontal" novalidate>
+
+            <!-- 隐藏的元素 -->
+            <input type="hidden" id="Id" name="Id" value="@Model.Id" />
+            <!-- 普通文本输入 -->
+            <div class="item form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <div class="">
+                    <input type="text" class="form-control" id="Name" name="Name" placeholder="请输入用户名" value="@Model.Name" required>
+                </div>
+                <div class="" style="">
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+            </div>
+
+            <!-- 电子邮件输入 -->
+            <div class="item form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <div class="">
+                    <input type="text" class="form-control" id="Email" name="Email" placeholder="请输入电子邮件" value="@Model.Email" required>
+                </div>
+                <div class="" style="margin-top:8px">
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+            </div>
+
+
+            <!-- 密码输入 -->
+            <div class="item form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <div class="">
+                    <input type="password" class="form-control" id="Password" name="Password" placeholder="" value="@Model.Password" required aria-describedby="passwordHelpBlock">
+                    <small id="passwordHelpBlock" class="form-text text-muted">
+                        密码需要至少 8 个字符，并且至少 1 个大写字母，1 个小写字母，1 个数字和 1 个特殊字符。
+                    </small>
+                </div>
+                <div class="" style="margin-top:8px">
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+            </div>
+
+            <!-- 密码验证输入 -->
+            <div class="item form-group">
+                <label asp-for="PasswordComfirm" class="control-label"></label>
+                <div class="">
+                    <input type="password" class="form-control" id="PasswordComfirm" name="PasswordComfirm" placeholder="" value="@Model.PasswordComfirm" required>
+                </div>
+                <div class="" style="">
+                    <span asp-validation-for="PasswordComfirm" class="text-danger"></span>
+                </div>
+            </div>
+
+
+
+            <!-- 移动电话输入 -->
+            <div class="item form-group">
+                <label asp-for="Phone" class="control-label"></label>
+                <div class="">
+                    <input type="text" class="form-control" id="Phone" name="Phone" placeholder="请输入手机号码" value="@Model.Phone" required>
+                </div>
+                <div class="" style="">
+                    <span asp-validation-for="Phone" class="text-danger"></span>
+                </div>
+            </div>
+
+            <!-- 普通文本区域输入 -->
+            <div class="item form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <div class="">
+                    <textarea class="resizable_textarea form-control" rows="3" id="Description" name="Description" placeholder="请输入简要说明...">@Model.Description</textarea>
+                </div>
+                <div class="" style="margin-top:8px">
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+            </div>
+
+          
+            <div class="form-group">
+                <div class="">
+                    <button type="submit" class="btn btn-primary" onclick="submitCreateOrEditForm()">提交数据</button>
+                    <button type="reset" class="btn btn-success">重置</button>
+                </div>
+            </div>
+            <div class="col-md-3 mb-5">
+
+               
+                <div   class="" style="">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+

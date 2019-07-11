@@ -1,0 +1,311 @@
+﻿@model IEnumerable<ELearning.Entities.ScenicSpot>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Index_LayoutView.cshtml";
+}
+<div class="banner-silder">
+    <div id="JiSlider" class="jislider">
+        <ul>
+            <li>
+                <div class="w3layouts-banner-top">
+
+                    <div class="container">
+                        <div class="agileits-banner-info">
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="w3layouts-banner-top w3layouts-banner-top1">
+                    <div class="container">
+                        <div class="agileits-banner-info">
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="w3layouts-banner-top w3layouts-banner-top2">
+                    <div class="container">
+                        <div class="agileits-banner-info">
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="w3layouts-banner-top w3layouts-banner-top3">
+                    <div class="container">
+                        <div class="agileits-banner-info">
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- //banner -->
+    <!--about-->
+    <div class="about">
+        <div class="container">
+            <div class="about-main">
+                <div class="col-md-6 about-left_w3ls_img">
+
+                </div>
+                <div class="col-md-6 about-right_w3ls">
+                    <div class="about-top_agile_its">
+                        <h2>致哈迷，致永不消散的情怀</h2>
+                        <p>我还记得2001年，爸妈在邮局给我订购了第一部《哈利波特与魔法石》，从此向我展开了魔法世界的故事。那一年，我刚好11岁，猫头鹰没有经过我的窗前，也没有带来霍格沃茨的入学通知书，然而，我依旧跟着哈利、罗 恩和 赫敏，一起登上了开往魔法学校的特快列车。
+
+                        <p>
+                            我还记得2001年，爸妈在邮局给我订购了第一部《哈利波特与魔法石》，从此向我展开了魔法世界的故事。那一年，我刚好11岁，猫头鹰没有经过我的窗前，也没有带来霍格沃茨的入学通知书，然而，我依旧跟着哈利、罗 恩和 赫敏，一起登上了开往魔法学校的特快列车。
+                        </p>
+                        <p>从小到大，我不记得有哪件事情让我留连忘返，不记得有哪样东西令我爱不释手，也不记得有什么人让我这样辗转反侧，只有这个魔法世界，经年过尽，依旧印刻在我的脑海中。</p>
+                    </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!-- //about -->
+    <!-- Tooltip -->
+
+
+    <div class="tooltip-content">
+        <!-- //Tooltip -->
+        <!--/services -->
+        <!-- //services -->
+        <!-- news -->
+        <div class="news">
+            <div class="container">
+                <h3 class="wthree_head" style="text-align:center;margin-left:110px">著名景区</h3>
+
+                <div class="w3-agileits-news-grids  news-w3row2">
+
+                    @foreach (var item in Model.Take(2))
+                    {
+                        <div class="col-md-6  news-left">
+                            <div class="w3-agile-news-date">
+
+                            </div>
+                            <div class="w3-agile-news-img">
+                                <a href="#@item.Id" data-toggle="modal"><img src="@item.Url" alt="" /></a>
+                                <h4><a href="#myModal" data-toggle="modal">@item.Theme.themeName | @item.Name</a></h4>
+                                <p>
+                                    @item.Describe
+                                </p>
+
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+                        <div class="tooltip-content">
+
+                            <div class="modal fade features-modal" id="@item.Id" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title">@item.Theme.themeName | @item.Name</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="@item.Url" class="img-responsive" alt="Boat house">
+                                            <p>
+                                                @item.Describe
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                    <div class="clearfix"> </div>
+                </div>
+
+                <div class="w3-agileits-news-grids">
+
+                    @foreach (var item in Model.Take(2))
+                    {
+                        <div class="col-md-6  news-left">
+                            <div class="w3-agile-news-date">
+
+                            </div>
+                            <div class="w3-agile-news-img">
+                                <a href="#@item.Id" data-toggle="modal"><img src="@item.Url" alt="" /></a>
+                                <h4 class="modal-title"><a href="#myModal" data-toggle="modal">@item.Theme.themeName | @item.Name</a></h4>
+                                <br />
+                                <p style="margin-top:60px; ">
+                                    @item.Describe
+                                </p>
+
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+                        <div class="col-md-6   ">
+                            <div class="w3-agile-news-date">
+
+                            </div>
+                            <div class="w3-agile-news-img">
+                                <a href="#@item.Id" data-toggle="modal"><img src="@item.Url" alt="" /></a>
+                                <h4 class="modal-title"><a href="#myModal" data-toggle="modal">@item.Theme.themeName | @item.Name</a></h4>
+                                <br />
+                                <p style="margin-top:60px; ">
+                                    @item.Describe
+                                </p>
+
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+                    
+                    }
+
+
+                </div>
+
+
+            </div>
+        </div>
+        <!-- //news -->
+        <!-- stats -->
+        <div class="stats jarallax" id="stats">
+            <div class="agile_overlay2">
+                <div class="container">
+                    <div class="agileits_heading_section">
+                        <h3 class="wthree_head two">Stats</h3>
+                        <p class="w3l_sub_para_agile">For Digital Life</p>
+
+                    </div>
+                    <div class="inner_w3l_agile_grids-1">
+                        <div class="col-md-3 w3layouts_stats_left w3_counter_grid">
+                            <i class="fa fa-picture-o" aria-hidden="true"></i>
+                            <p class="counter">1,546</p>
+                            <h3>Sodales ut</h3>
+                        </div>
+                        <div class="col-md-3 w3layouts_stats_left w3_counter_grid1">
+                            <i class="fa fa-smile-o" aria-hidden="true"></i>
+                            <p class="counter">14,345</p>
+                            <h3>Donec justo</h3>
+                        </div>
+                        <div class="col-md-3 w3layouts_stats_left w3_counter_grid2">
+                            <i class="fa fa-trophy" aria-hidden="true"></i>
+                            <p class="counter">563</p>
+                            <h3>Velit laoreet</h3>
+                        </div>
+                        <div class="col-md-3 w3layouts_stats_left w3_counter_grid3">
+                            <i class="fa fa-camera" aria-hidden="true"></i>
+                            <p class="counter">2,874</p>
+                            <h3>Ipsum dolor</h3>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+<!-- js -->
+ 
+<script src="~/js/jquery-2.1.4.min.js"></script>
+<script src="~/js/JiSlider.js"></script>
+<script>
+    $(window).load(function () {
+        $('#JiSlider').JiSlider({ color: '#fff', start: 3, reverse: true }).addClass('ff')
+    })
+</script>
+<script src="/js/jarallax.js"></script>
+<script src="/js/SmoothScroll.min.js"></script>
+<script type="text/javascript">
+    /* init Jarallax */
+    $('.jarallax').jarallax({
+        speed: 0.5,
+        imgWidth: 1366,
+        imgHeight: 768
+    })
+</script>
+
+<!-- start-smoth-scrolling -->
+<!-- //for bootstrap working -->
+<!-- stats -->
+<script src="/js/jquery.waypoints.min.js"></script>
+<script src="/js/jquery.countup.js"></script>
+<script>
+    $('.counter').countUp();
+</script>
+<!-- //stats -->
+<!-- start-smooth-scrolling -->
+<script type="text/javascript" src="/js/move-top.js"></script>
+<script type="text/javascript" src="/js/easing.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        $(".scroll").click(function (event) {
+            event.preventDefault();
+            $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+        });
+    });
+</script>
+<!-- start-smooth-scrolling -->
+<!-- here stars scrolling icon -->
+<script type="text/javascript">
+    $(document).ready(function () {
+        /*
+            var defaults = {
+            containerID: 'toTop', // fading element id
+            containerHoverID: 'toTopHover', // fading element hover id
+            scrollSpeed: 1200,
+            easingType: 'linear'
+            };
+        */
+
+        $().UItoTop({ easingType: 'easeOutQuart' });
+
+    });
+</script>
+<!-- //here ends scrolling icon -->
+
+<script type="text/javascript" src="/js/bootstrap-3.1.1.min.js"></script>
+<script type="text/javascript">
+    $(window).load(function () {
+        $("#flexiselDemo1").flexisel({
+            visibleItems: 1,
+            animationSpeed: 1000,
+            autoPlay: false,
+            autoPlaySpeed: 3000,
+            pauseOnHover: true,
+            enableResponsiveBreakpoints: true,
+            responsiveBreakpoints: {
+                portrait: {
+                    changePoint: 480,
+                    visibleItems: 1
+                },
+                landscape: {
+                    changePoint: 640,
+                    visibleItems: 1
+                },
+                tablet: {
+                    changePoint: 768,
+                    visibleItems: 1
+                }
+            }
+        });
+
+    });
+</script>
+<script type="text/javascript" src="/js/jquery.flexisel.js"></script>

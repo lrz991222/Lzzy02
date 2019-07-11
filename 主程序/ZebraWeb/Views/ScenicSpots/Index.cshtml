@@ -1,0 +1,122 @@
+﻿@model PaginatedList<ELearning.Entities.ScenicSpot>
+
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<h1>景区管理</h1>
+
+<p>
+    <a asp-action="Create">新添景区</a>
+</p>
+<form asp-controller="ScenicSpots" asp-action="Index">
+    <p>
+        景区名： <input type="text" name="ScenicSpots">
+        <input type="submit" value="搜索" />
+    </p>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                景区等级
+            </th>
+            <th>
+                景区名字
+            </th>
+            <th>
+                东经
+            </th>
+            <th>
+                北纬
+            </th>
+            <th>
+                地址
+            </th>
+            <th>
+                类型
+            </th>
+            <th>
+                开发时间
+            </th>
+            <th>
+                电话
+            </th>
+            <th>
+                主题
+            </th>
+            <th>
+                标签
+            </th>
+            
+             
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Grade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lng)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Addr)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Opentime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Theme.themeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Label.LabelName)
+            </td>
+            
+            
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id" asp-controller="ScenicSpots">修改</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">详细</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">删除</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+@{
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+}
+
+<a asp-action="Index"
+   asp-route-sortOrder="@ViewData["CurrentSort"]"
+   asp-route-pageNumber="@(Model.PageIndex - 1)"
+   asp-route-currentFilter="@ViewData["CurrentFilter"]"
+   class="btn btn-default @prevDisabled">
+    上一页
+</a>
+<a asp-action="Index"
+   asp-route-sortOrder="@ViewData["CurrentSort"]"
+   asp-route-pageNumber="@(Model.PageIndex + 1)"
+   asp-route-currentFilter="@ViewData["CurrentFilter"]"
+   class="btn btn-default @nextDisabled">
+    下一页
+</a>
